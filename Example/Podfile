@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'VideoConsultationSDK_Example' do
+  pod 'VideoConsultationSDK', :path => '../'
+
+  target 'VideoConsultationSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
