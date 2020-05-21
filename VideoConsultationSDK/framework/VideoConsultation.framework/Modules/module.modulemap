@@ -1,0 +1,11 @@
+framework module VideoConsultation {
+  umbrella header "VideoConsultation-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module VideoConsultation.Swift {
+    header "VideoConsultation-Swift.h"
+    requires objc
+}

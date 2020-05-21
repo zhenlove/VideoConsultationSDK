@@ -7,12 +7,28 @@
 //
 
 #import "KMAppDelegate.h"
-
+@import KMNetwork;
 @implementation KMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+        // 设置环境
+    //    [KMServiceModel setupParameterWithAppid:@"JSKMEHosp"
+    //                                  appsecret:@"KMEHosp@2016!WEB@!!DD@!$!^*^(^"
+    //                                     appkey:@"KMEHosp@2016#WEB"
+    //                                      orgid:@""
+    //                                environment:EnvironmentTesting3];
+        [KMServiceModel setupParameterWithAppid:@"JSKMEHospIOS"
+                                      appsecret:@"JSKMEHospIOS@2016"
+                                         appkey:@"0123456789ios#2016"
+                                          orgid:@""
+                                    environment:EnvironmentTesting3];
+    
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back_icon"]];
+    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back_icon"]];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]} forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]} forState:UIControlStateHighlighted];
     return YES;
 }
 
