@@ -36,9 +36,9 @@ pod 'VideoConsultationSDK'
 @import KMNetwork;
 @import VideoConsultation;
 
-[KMServiceModel setupParameterWithAppid:@"JSKMEHospIOS"
-                              appsecret:@"JSKMEHospIOS@2016"
-                                 appkey:@"0123456789ios#2016"
+[KMServiceModel setupParameterWithAppid:@"*********"
+                              appsecret:@"*********"
+                                 appkey:@"*********"
                                   orgid:@""
                             environment:EnvironmentTesting3];
 ```

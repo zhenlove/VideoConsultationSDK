@@ -26,7 +26,7 @@
 		28A37DED53897788DFBD2A99 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4DAF3EF72DFD2EC7777C47A5 /* Pods_VideoConsultationSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoConsultationSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5210C8684995B9126BC3933E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		54DB236E4E66AB49454822C0 /* VideoConsultationSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VideoConsultationSDK.podspec; path = ../VideoConsultationSDK.podspec; sourceTree = "<group>"; };
+		54DB236E4E66AB49454822C0 /* VideoConsultationSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VideoConsultationSDK.podspec; path = ../VideoConsultationSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* VideoConsultationSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoConsultationSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -152,7 +152,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				93E90359F74F2F5B613FB7C9 /* [CP] Embed Pods Frameworks */,
-				C4E8D9DB9C197FD949358643 /* [CP] Copy Pods Resources */,
+				2A53831404A97160E7BCBB65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +213,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A53831404A97160E7BCBB65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoConsultationSDK_Example/Pods-VideoConsultationSDK_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/KMAgoraRtc/AgoraRtc.bundle",
+				"${PODS_ROOT}/KMTIM/TUIKit/Resources/TUIKitFace.bundle",
+				"${PODS_ROOT}/KMTIM/TUIKit/Resources/TUIKitResource.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/KMTIMSDK/KMTIMSDK.bundle",
+				"${PODS_ROOT}/../../VideoConsultationSDK/Assets/VideoConsultation.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AgoraRtc.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TUIKitFace.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TUIKitResource.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KMTIMSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VideoConsultation.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoConsultationSDK_Example/Pods-VideoConsultationSDK_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		93E90359F74F2F5B613FB7C9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,32 +277,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoConsultationSDK_Example/Pods-VideoConsultationSDK_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4E8D9DB9C197FD949358643 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VideoConsultationSDK_Example/Pods-VideoConsultationSDK_Example-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/KMAgoraRtc/AgoraRtc.bundle",
-				"${PODS_ROOT}/KMTIM/TUIKit/Resources/TUIKitFace.bundle",
-				"${PODS_ROOT}/KMTIM/TUIKit/Resources/TUIKitResource.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/KMTIMSDK/KMTIMSDK.bundle",
-				"${PODS_ROOT}/../../VideoConsultationSDK/Assets/VideoConsultation.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AgoraRtc.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TUIKitFace.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TUIKitResource.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KMTIMSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VideoConsultation.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoConsultationSDK_Example/Pods-VideoConsultationSDK_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CB7F0C1683679AD0397F5A91 /* [CP] Check Pods Manifest.lock */ = {
