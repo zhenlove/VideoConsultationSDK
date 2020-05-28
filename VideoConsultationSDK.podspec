@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VideoConsultationSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of VideoConsultationSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -27,14 +27,15 @@ TODO: Add long description of the pod here.
   s.author           = { 'zhenlove' => '121910347@qq.com' }
   s.source           = { :git => 'https://github.com/zhenlove/VideoConsultationSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.swift_version = '5.0'
   s.ios.deployment_target = '9.0'
   s.static_framework  =  true
   s.xcconfig     = { 'VALID_ARCHS' => 'armv7 arm64 x86_64'}
   s.vendored_frameworks = 'VideoConsultationSDK/framework/VideoConsultation.framework'
   s.resource = "VideoConsultationSDK/Assets/*.bundle"
+#  s.resource = "VideoConsultationSDK/framework/VideoConsultation.framework/*.bundle"
 
-  s.dependency 'KMTIMSDK'
-  s.dependency 'KMNetwork'
-  s.dependency 'KMAgoraRtc'
+  s.dependency 'KMTIMSDK','0.1.8'
+  s.dependency 'KMNetwork','1.0.5'
+  s.dependency 'KMAgoraRtc','1.0.8'
 end
