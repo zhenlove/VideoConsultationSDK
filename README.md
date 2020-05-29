@@ -36,124 +36,98 @@ pod 'VideoConsultationSDK'
 @import KMNetwork;
 @import VideoConsultation;
 
-[KMServiceModel setupParameterWithAppid:@"*********"
-                              appsecret:@"*********"
-                                 appkey:@"*********"
+[KMServiceModel setupParameterWithAppid:@"JSKMEHospIOS"
+                              appsecret:@"JSKMEHospIOS@2016"
+                                 appkey:@"0123456789ios#2016"
                                   orgid:@""
                             environment:EnvironmentTesting3];
 ```
-- 设置患者信息
+- 登录
 ```objc
-Member *member = [[Member alloc]init];
-member.phone = @"13760291826";
-member.birthday = @"2001-01-09";
-member.name = @"林祥";
-member.gender = @"男";
-member.allergicRemark = @"花粉过敏,等等";
+    [[VideoConsultationManager sharedInstance] loginWithNumber:@"wangge" handler:^(TaskType type,id result,NSError * error){
+        NSLog(@"登录成功");
+    }];
 ```
 
-- 设置医生信息
+- 创建订单
 ```objc
-DoctorInfo* doctor = [[DoctorInfo alloc]init];
-doctor.doctorName = @"谢维";
-doctor.doctorId = @"78ee0381bbb541aba41fbc2ecb4566ba";
-doctor.doctorHeadUrl = @"https://tstore2.kmwlyy.com:8015/images/22657fda351dd313d4a40553f5446af8.png";
-```
+    Member * member = [[Member alloc]init];
+    member.phone = @"13760291826";
+    member.birthday = @"2001-01-09";
+    member.name = @"林祥";
+    member.gender = @"男";
+    member.allergicRemark = @"花粉过敏,等等";
+    
+    DoctorInfo * doctor = [[DoctorInfo alloc]init];
+    doctor.doctorId = @"78ee0381bbb541aba41fbc2ecb4566ba";
 
-- 设置问诊信息
-```objc
-MedicalInfo *medicalInfo = [[MedicalInfo alloc]init];
-medicalInfo.consultDisease = @"感冒sssss";
-medicalInfo.consultContent = @"流鼻涕，很难受，而且头很痛";
-```
+    
+    MedicalInfo *medicalInfo = [[MedicalInfo alloc]init];
+    medicalInfo.consultDisease = @"感冒sssss";
+    medicalInfo.consultContent = @"流鼻涕，很难受，而且头很痛ssssss流鼻涕，很难受，而且头很痛ssssss流鼻涕，很难受，而且头很痛ssssss流鼻涕";
+    medicalInfo.attachmentImage = self.imagesArr;
+    
+    
+    VCParam * param = [[VCParam alloc]init];
+    param.member = member;
+    param.doctor = doctor;
+    param.medicalInfo = medicalInfo;
+    
+    
 
-- 设置参数
-```objc
-VCParam * param = [[VCParam alloc]init];
-param.number = @"wangge"; //  账户名或账户唯一标记,登录时必要参数
-param.member = self.member; // 创建问诊时必要参数
-param.doctor = self.doctor; //进入诊室时必要参数
-param.medicalInfo = self.medicalInfo; // 创建问诊时必要参数
+    
+    
+    __weak typeof(self)weakSelf = self;
+    [[VideoConsultationManager sharedInstance] createOrder:param handler:^(TaskType type,id result,NSError * error) {
+        if (type == TaskTypeCreateOrder) {
+            NSLog(@"创建订单成功%@",result);
+            if (result) {
 
-/// 再次问诊时必填参数
-param.registerID = @"038c7750335d44a297e535a4ce4ba4bb"; // 查询订单数据和处方时必要参数
-param.channleId = @"200008755"; //进入诊室时必要参数
-```
-- 初始化
-```objc
-VideoConsultationManager *manager = [[VideoConsultationManager alloc]init];
-manager.param = self.param;
-manager.showVC = self.navigationController;
-```
-
-- 任务状态回调
-```objc
-self.manager.taskHandler = ^(NSString * _Nullable taskTitle, NSProgress * _Nullable progress, BOOL hidden){
-    if (taskTitle) {
-        weakSelf.hud.label.text = taskTitle;
-    }
-    if (progress) {
-        weakSelf.hud.mode = MBProgressHUDModeAnnularDeterminate;
-        weakSelf.hud.progressObject = progress;
-    }else{
-        weakSelf.hud.mode = MBProgressHUDModeIndeterminate;
-    }
-    if (hidden) {
-        [weakSelf.hud hideAnimated:YES];
-    }
-};
-```
-
-- 数据回调、根据任务类型保存需要数据
-```objc
-self.manager.completeHandler = ^( TaskType type,id _Nullable result, NSError * _Nullable error){
-    if (result) {
-        NSLog(@"%@",result);
-        switch (type) {
-            case TaskTypeLogin:
-                
-                break;
-            case TaskTypeGetRecipeFiles:
-            {
-                if ([result isKindOfClass:[NSURL class]]) {
-                    /// 查看处方
+                if ([result[@"Status"] intValue] == 0 && [result[@"Data"][@"ActionStatus"] isEqualToString:@"Success"]) {
+                    weakSelf.channelID = [result[@"Data"][@"ChannelID"] integerValue];
+                    weakSelf.opdRegisterID = result[@"Data"][@"OPDRegisterID"];
                 }
             }
-            default:
-                break;
         }
-        
-    }
-    if (error) {
-        NSLog(@"%@",error);
-    }
-};
-```
-- 创建问诊并进入诊室
-```objc
-[self.manager enterConsultationRoom];
+    }];
 ```
 
-- 再次进入诊室
+- 进入诊室
 ```objc
-[self.manager againEnterConsultationRoom];
+[[VideoConsultationManager sharedInstance] enterConsultationRoomWithChannleID:self.channelID
+                                                                         doctorID:self.doctorID
+                                                                           showVC:self.navigationController
+                                                                          handler:^(TaskType type,id result,NSError * error) {
+        NSLog(@"进入诊室%@",result);
+    }];
 ```
 
-- 获取订单信息
+- 获取诊室候诊人数量
 ```objc
-[self.manager getRegistersInfo];
+[[VideoConsultationManager sharedInstance] getRoomWaitCountWithChannleID:self.channelID doctorID:self.doctorID handler:^(TaskType type,id result,NSError * error) {
+        NSLog(@"获取候诊人数%@",result);
+    }];
 ```
 
-- 获取处方详情
+- 查询订单详情
 ```objc
-[self.manager getRecipeFiles];
+ [[VideoConsultationManager sharedInstance] getRegistersInfoWithRegisterID:self.opdRegisterID handler:^(TaskType type,id result,NSError * error) {
+        NSLog(@"查询订单详情%@",result);
+    }];
+```
+- 下载处方
+```objc
+[[VideoConsultationManager sharedInstance] getFilesDownloadWithRegisterID:self.opdRegisterID handler:^(TaskType type,id result,NSError * error) {
+        NSLog(@"下载处方%@",result);
+    }];
 ```
 
-- 下载处方PDF
+- 清理缓存
 ```objc
-[self.manager getFilesDownload];
+if ([[VideoConsultationManager sharedInstance]removeFilePDF]) {
+        NSLog(@"清理缓存成功");
+}
 ```
-
 ## 作者
 
 zhenlove, 121910347@qq.com

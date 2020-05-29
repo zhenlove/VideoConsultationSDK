@@ -1,3 +1,5 @@
+#source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 inhibit_all_warnings!
 platform :ios, '9.0'
@@ -5,7 +7,8 @@ platform :ios, '9.0'
 target 'VideoConsultationSDK_Example' do
 #  pod 'KMNetwork','0.1.5'
 #  pod 'AgoraRtcEngine_iOS','3.0.0.2'
-  pod 'VideoConsultationSDK', :path => '../'
+#  pod 'VideoConsultationSDK', :path => '../'
+  pod 'VideoConsultationSDK', :git => 'https://github.com/zhenlove/VideoConsultationSDK.git', :tag => '0.1.1'
 #  pod 'KMNetwork',:path => '/Users/ed/github/KMNetwork/'
   pod 'ZLPhotoBrowser','~> 3.1.4'
   pod 'MBProgressHUD'
