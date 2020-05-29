@@ -1,26 +1,89 @@
 PODS:
+  - AgoraRtcEngine_iOS (3.0.0.1)
+  - Alamofire (4.9.1)
+  - ISVImageScrollView (0.1.2)
+  - Kingfisher (4.10.1)
+  - KMAgoraRtc (1.0.8):
+    - AgoraRtcEngine_iOS (= 3.0.0.1)
+    - Kingfisher (= 4.10.1)
+    - SnapKit (= 4.2.0)
+  - KMNetwork (0.1.6):
+    - Alamofire (= 4.9.1)
+  - KMTIM (0.1.1):
+    - ISVImageScrollView (= 0.1.2)
+    - MMLayout (= 0.2.0)
+    - ReactiveObjC (= 3.1.1)
+    - SDWebImage
+    - Toast (= 4.0.0)
+    - TXIMSDK_iOS
+  - KMTIMSDK (0.1.8):
+    - Kingfisher (= 4.10.1)
+    - KMTIM (= 0.1.1)
+    - SnapKit (= 4.2.0)
   - MBProgressHUD (1.2.0)
+  - MMLayout (0.2.0)
+  - ReactiveObjC (3.1.1)
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
+  - SnapKit (4.2.0)
+  - Toast (4.0.0)
+  - TXIMSDK_iOS (4.8.10)
+  - VideoConsultationSDK (0.1.1):
+    - KMAgoraRtc (= 1.0.8)
+    - KMNetwork (= 0.1.6)
+    - KMTIMSDK (= 0.1.8)
   - ZLPhotoBrowser (3.1.4):
     - SDWebImage
 
 DEPENDENCIES:
   - MBProgressHUD
+  - VideoConsultationSDK (from `../`)
   - ZLPhotoBrowser (~> 3.1.4)
 
 SPEC REPOS:
+  https://gitee.com/zhenlove/zhenSpecs.git:
+    - KMAgoraRtc
+    - KMNetwork
+    - KMTIMSDK
   trunk:
+    - AgoraRtcEngine_iOS
+    - Alamofire
+    - ISVImageScrollView
+    - Kingfisher
+    - KMTIM
     - MBProgressHUD
+    - MMLayout
+    - ReactiveObjC
     - SDWebImage
+    - SnapKit
+    - Toast
+    - TXIMSDK_iOS
     - ZLPhotoBrowser
 
+EXTERNAL SOURCES:
+  VideoConsultationSDK:
+    :path: "../"
+
 SPEC CHECKSUMS:
+  AgoraRtcEngine_iOS: f7fb9870f884dfa91fc3295c6594ea089f38c481
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ISVImageScrollView: ba511d12a1661b40feb8921309c0854bf93ec749
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  KMAgoraRtc: d87fc17b6444cb249b139ecb244335efe0313fb5
+  KMNetwork: c8463c83905737ab8ce68fec92ab0eb9bdcd6ec0
+  KMTIM: 07d84d88d0de6e6f2cc0c0cdf101f4d49d495f3f
+  KMTIMSDK: 674f381c6f8e299b54808ba52077a67d191921d8
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MMLayout: 3fb59d58eeb8656c64e61d550fb0088e10666c11
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  TXIMSDK_iOS: 17de2fef786f78843687cc7bd9592759edd2ec0b
+  VideoConsultationSDK: 4c2121e682d70a6758edb2be3865e1d5d180b80a
   ZLPhotoBrowser: 638189d99c51f78013c9a0369e385db4a4b9673f
 
-PODFILE CHECKSUM: b03fda47502afdc9fabc53ae91197a3d8f5774ad
+PODFILE CHECKSUM: 7cf21f1fd3767ecc515a36e2730207c4003a5c20
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.2

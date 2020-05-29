@@ -152,6 +152,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				93E90359F74F2F5B613FB7C9 /* [CP] Embed Pods Frameworks */,
+				9238CBA68B6B8B127ED9F337 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +213,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9238CBA68B6B8B127ED9F337 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoConsultationSDK_Example/Pods-VideoConsultationSDK_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/KMAgoraRtc/AgoraRtc.bundle",
+				"${PODS_ROOT}/KMTIM/TUIKit/Resources/TUIKitFace.bundle",
+				"${PODS_ROOT}/KMTIM/TUIKit/Resources/TUIKitResource.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/KMTIMSDK/KMTIMSDK.bundle",
+				"${PODS_ROOT}/../../VideoConsultationSDK/Assets/VideoConsultation.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AgoraRtc.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TUIKitFace.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TUIKitResource.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KMTIMSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VideoConsultation.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoConsultationSDK_Example/Pods-VideoConsultationSDK_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		93E90359F74F2F5B613FB7C9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,14 +246,32 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VideoConsultationSDK_Example/Pods-VideoConsultationSDK_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ISVImageScrollView/ISVImageScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/KMNetwork/KMNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MMLayout/MMLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${PODS_ROOT}/TXIMSDK_iOS/ImSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 				"${BUILT_PRODUCTS_DIR}/ZLPhotoBrowser/ZLPhotoBrowser.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISVImageScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLPhotoBrowser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

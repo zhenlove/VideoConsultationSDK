@@ -36,6 +36,6 @@ TODO: Add long description of the pod here.
 #  s.resource = "VideoConsultationSDK/framework/VideoConsultation.framework/*.bundle"
 
   s.dependency 'KMTIMSDK','0.1.8'
-  s.dependency 'KMNetwork','1.0.5'
+  s.dependency 'KMNetwork','0.1.6'
   s.dependency 'KMAgoraRtc','1.0.8'
 end
