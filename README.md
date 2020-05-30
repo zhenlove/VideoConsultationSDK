@@ -128,6 +128,15 @@ if ([[VideoConsultationManager sharedInstance]removeFilePDF]) {
         NSLog(@"清理缓存成功");
 }
 ```
+
+- 问诊结束回调
+```objc
+[VideoConsultationManager sharedInstance].completeHandler = ^(TaskType type, id  result, NSError * error) {
+    if (type == TaskTypeVisitCompleted) {
+        NSLog(@"%@",result);
+    }
+};
+```
 ## 作者
 
 zhenlove, 121910347@qq.com

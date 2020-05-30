@@ -1,6 +1,7 @@
 #source 'https://github.com/CocoaPods/Specs.git'
+#添加私有库地址
 source 'https://gitee.com/zhenlove/zhenSpecs.git'
-#source 'https://cdn.cocoapods.org/'
+source 'https://cdn.cocoapods.org/'
 
 use_frameworks!
 inhibit_all_warnings!
@@ -8,7 +9,8 @@ platform :ios, '9.0'
 
 target 'VideoConsultationSDK_Example' do
 
-pod 'VideoConsultationSDK', :path => '../'
-  pod 'ZLPhotoBrowser','~> 3.1.4'#'~> 3.1.4'
+  pod 'VideoConsultationSDK', :path => '../'
+#  pod 'VideoConsultationSDK','0.1.2'
+  pod 'ZLPhotoBrowser','~> 3.1.4'
   pod 'MBProgressHUD'
 end

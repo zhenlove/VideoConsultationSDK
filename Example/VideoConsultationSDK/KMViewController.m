@@ -28,6 +28,12 @@
          self.channelID = 200008812;
          self.opdRegisterID = @"2189b33cf21946169142c551599568a6";
          self.doctorID = @"78ee0381bbb541aba41fbc2ecb4566ba";
+    
+    [VideoConsultationManager sharedInstance].completeHandler = ^(TaskType type, id  result, NSError * error) {
+        if (type == TaskTypeVisitCompleted) {
+            NSLog(@"%@",result);
+        }
+    };
              
          //        Member * member = [[Member alloc]init];
          //        member.phone = @"13760291826";

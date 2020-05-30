@@ -29,7 +29,7 @@ PODS:
   - SnapKit (4.2.0)
   - Toast (4.0.0)
   - TXIMSDK_iOS (4.8.10)
-  - VideoConsultationSDK (0.1.1):
+  - VideoConsultationSDK (0.1.2):
     - KMAgoraRtc (= 1.0.8)
     - KMNetwork (= 0.1.6)
     - KMTIMSDK (= 0.1.8)
@@ -81,9 +81,9 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TXIMSDK_iOS: 17de2fef786f78843687cc7bd9592759edd2ec0b
-  VideoConsultationSDK: 4c2121e682d70a6758edb2be3865e1d5d180b80a
+  VideoConsultationSDK: 9ae24e17737254d02b035d4f9c6c94c950ae3a18
   ZLPhotoBrowser: 638189d99c51f78013c9a0369e385db4a4b9673f
 
-PODFILE CHECKSUM: 7cf21f1fd3767ecc515a36e2730207c4003a5c20
+PODFILE CHECKSUM: 6e235373d2fc4f67191d9d23ae9fb53827ea83e2
 
 COCOAPODS: 1.9.2
