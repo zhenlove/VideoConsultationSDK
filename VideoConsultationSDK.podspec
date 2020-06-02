@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VideoConsultationSDK'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A short description of VideoConsultationSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -35,7 +35,7 @@ TODO: Add long description of the pod here.
   s.resource = "VideoConsultationSDK/Assets/*.bundle"
 #  s.resource = "VideoConsultationSDK/framework/VideoConsultation.framework/*.bundle"
 
-  s.dependency 'KMTIMSDK','0.1.8'
+  s.dependency 'KMTIMSDK','0.1.9'
   s.dependency 'KMNetwork','0.1.6'
-  s.dependency 'KMAgoraRtc','1.0.8'
+  s.dependency 'KMAgoraRtc','1.0.9'
 end

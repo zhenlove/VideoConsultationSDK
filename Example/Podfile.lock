@@ -3,7 +3,7 @@ PODS:
   - Alamofire (4.9.1)
   - ISVImageScrollView (0.1.2)
   - Kingfisher (4.10.1)
-  - KMAgoraRtc (1.0.8):
+  - KMAgoraRtc (1.0.9):
     - AgoraRtcEngine_iOS (= 3.0.0.1)
     - Kingfisher (= 4.10.1)
     - SnapKit (= 4.2.0)
@@ -16,7 +16,7 @@ PODS:
     - SDWebImage
     - Toast (= 4.0.0)
     - TXIMSDK_iOS
-  - KMTIMSDK (0.1.8):
+  - KMTIMSDK (0.1.9):
     - Kingfisher (= 4.10.1)
     - KMTIM (= 0.1.1)
     - SnapKit (= 4.2.0)
@@ -29,10 +29,10 @@ PODS:
   - SnapKit (4.2.0)
   - Toast (4.0.0)
   - TXIMSDK_iOS (4.8.10)
-  - VideoConsultationSDK (0.1.2):
-    - KMAgoraRtc (= 1.0.8)
+  - VideoConsultationSDK (0.1.4):
+    - KMAgoraRtc (= 1.0.9)
     - KMNetwork (= 0.1.6)
-    - KMTIMSDK (= 0.1.8)
+    - KMTIMSDK (= 0.1.9)
   - ZLPhotoBrowser (3.1.4):
     - SDWebImage
 
@@ -70,10 +70,10 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   ISVImageScrollView: ba511d12a1661b40feb8921309c0854bf93ec749
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  KMAgoraRtc: d87fc17b6444cb249b139ecb244335efe0313fb5
+  KMAgoraRtc: b08d5a05c7de07140fce310625b9395a01c1fa94
   KMNetwork: c8463c83905737ab8ce68fec92ab0eb9bdcd6ec0
   KMTIM: 07d84d88d0de6e6f2cc0c0cdf101f4d49d495f3f
-  KMTIMSDK: 674f381c6f8e299b54808ba52077a67d191921d8
+  KMTIMSDK: ac52931abfdd97aa442afe79a4581b1b3325bd7a
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MMLayout: 3fb59d58eeb8656c64e61d550fb0088e10666c11
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
@@ -81,7 +81,7 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TXIMSDK_iOS: 17de2fef786f78843687cc7bd9592759edd2ec0b
-  VideoConsultationSDK: 9ae24e17737254d02b035d4f9c6c94c950ae3a18
+  VideoConsultationSDK: 67f08ab0e00a5a80ae2b8a9c096fdc19de78581c
   ZLPhotoBrowser: 638189d99c51f78013c9a0369e385db4a4b9673f
 
 PODFILE CHECKSUM: 6e235373d2fc4f67191d9d23ae9fb53827ea83e2
