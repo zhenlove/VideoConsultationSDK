@@ -10,7 +10,7 @@ platform :ios, '9.0'
 target 'VideoConsultationSDK_Example' do
 
   pod 'VideoConsultationSDK', :path => '../'
-#  pod 'VideoConsultationSDK','0.1.2'
+#  pod 'VideoConsultationSDK','0.1.4'
   pod 'ZLPhotoBrowser','~> 3.1.4'
   pod 'MBProgressHUD'
 end

@@ -1,6 +1,6 @@
 # VideoConsultationSDK
 
-[![CI Status](https://img.shields.io/travis/zhenlove/VideoConsultationSDK.svg?style=flat)](https://travis-ci.org/zhenlove/VideoConsultationSDK)
+[![Build Status](https://travis-ci.com/zhenlove/VideoConsultationSDK.svg?branch=master)](https://travis-ci.com/zhenlove/VideoConsultationSDK)
 [![Version](https://img.shields.io/cocoapods/v/VideoConsultationSDK.svg?style=flat)](https://cocoapods.org/pods/VideoConsultationSDK)
 [![License](https://img.shields.io/cocoapods/l/VideoConsultationSDK.svg?style=flat)](https://cocoapods.org/pods/VideoConsultationSDK)
 [![Platform](https://img.shields.io/cocoapods/p/VideoConsultationSDK.svg?style=flat)](https://cocoapods.org/pods/VideoConsultationSDK)
